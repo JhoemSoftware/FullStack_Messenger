@@ -18,21 +18,21 @@ class Message extends Model
 
     public function sender()
     {
-        return $this->belongsToMany(User::class, 'sender_id');
+        return $this->belongsTo(User::class, 'sender_id');
     }
 
     public function receiver()
     {
-        return $this->belongsToMany(User::class, 'receiver_id');
+        return $this->belongsTo(User::class, 'receiver_id');
     }
 
     public function group()
     {
-        return $this->belongsToMany(Group::class);
+        return $this->belongsTo(Group::class);
     }
 
     public function attachments()
     {
-        return $this->belongsToMany(MessageAttachment::class);
+        return $this->hasMany(MessageAttachment::class);
     }
 }

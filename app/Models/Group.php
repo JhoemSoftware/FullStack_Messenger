@@ -23,11 +23,11 @@ class Group extends Model
 
     public function messages()
     {
-        return $this->belongsToMany(Message::class);
+        return $this->hasMany(Message::class);
     }
 
     public function owner()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class);
     }
 }
