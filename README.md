@@ -21,14 +21,18 @@ composer require laravel/breeze --dev
 
 php artisan breeze:install
 ```
-
 > In the questions we select the options of preference, for this project the following were selected
 
 - React with Inertia
-
 - Dark Mode
-
 - Pest
+</li>
+<li><b>Laravel Broadcasting</b>
 
+```bash
+php artisan install:broadcasting
+```
+- Yes
+- Yes
 </li>
 </ol>
